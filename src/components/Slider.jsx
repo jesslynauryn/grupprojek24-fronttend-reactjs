@@ -19,6 +19,21 @@ const Slide = ({src}) => {
           </SplideSlide>
         ))}
       </Splide>
+
+
+    /* {src.map((data) => (
+      <SplideSlide>
+      <div>
+        <a>
+          <img src={data.image}  alt={data.alt}/>
+          <p>{data.text}</p>
+        </a>
+      </div>
+      </SplideSlide>
+    ))}
+    </Splide> */
+
+
     );
   };
 
