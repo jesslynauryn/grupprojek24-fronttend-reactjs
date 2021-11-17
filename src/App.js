@@ -12,12 +12,14 @@ function App() {
     <div>
       <NaviBar></NaviBar>
       <LandingPage></LandingPage>
-      <Gallery></Gallery>
-      <Slider></Slider>
       <Content></Content>
+      <Slider></Slider>
+      <Gallery></Gallery>
       
     </div>
   );
 }
 
 export default App;
+
+

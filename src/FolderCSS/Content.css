@@ -1,9 +1,18 @@
 .card {
     border: none;
+    margin-left: -70px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .jarak {
     margin-bottom: 20px;
-    height: 300px;
+    height: 200px;
+    width: 200px;
+
+}
+
+.jarakItem {
+    height: 420px;
     width: 300px;
+    margin-left: -60px;
 }
