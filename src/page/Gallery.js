@@ -73,6 +73,9 @@ const Gallery = () => {
 
     return(
         <div>
+            <div className="title">
+              <h2 style={{textAlign: "center", marginTop:"100px"}}>Image Gallery</h2>
+            </div>
             <div className="gallery">
                 {data.map ((item, index) => {
                     return (
