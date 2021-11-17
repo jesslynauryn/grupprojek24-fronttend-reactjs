@@ -1,8 +1,6 @@
 import React from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import '@splidejs/splide/dist/css/splide.min.css';
-import "../FolderCSS/Slider.css";
-
 
 const Slide = ({src}) => {
     return (
@@ -16,7 +14,8 @@ const Slide = ({src}) => {
         
         {src.map((data) => (
           <SplideSlide>
-            <img src={data.image}  alt={data.alt} className="img"/>
+            <img src={data.image}  alt={data.alt}/>
+            <h5 className="text-slider">{data.text}</h5>
           </SplideSlide>
         ))}
       </Splide>
