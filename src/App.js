@@ -10,6 +10,7 @@ import Slider from "./page/Slider";
 import Content from "./page/Content";
 import Wisata1 from "./page/Wisata1";
 
+
 function App() {
   return (
     <div>
