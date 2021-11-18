@@ -22,13 +22,9 @@
 .text-slider{
     /* position: absolute;
     color: blue; */
-    padding-top:8em;
-    padding-left:8em;
-    margin-top:0;
-    color: white;
-    text-shadow:2px 2px 4px rgb(20, 216, 216);
-    position: absolute;
-
+    border: black;
+    border-width:10px;
+    
 }
 
 
