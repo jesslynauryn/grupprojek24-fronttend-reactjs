@@ -1,12 +1,12 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ScrollToTop from "./components/ScrollToTop";
-import Wisata from "./page/wisata";
+import Wisata1 from "./page/wisata1";
 
 function App() {
   return (
     <div>
-      <Wisata />
+      <Wisata1 />
       <ScrollToTop></ScrollToTop>
     </div>
   );
