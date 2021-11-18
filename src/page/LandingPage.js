@@ -112,7 +112,7 @@ const LandingPage = () => (
                     <Card className="card" style={{border:"none", fontFamily:"Georgia, 'Times New Roman', Times, serif;"}}>
                         <p>Bali Island is a small beautiful island and a part of Indonesia archipelago, and the most famous of Indonesian tourism in the world. </p>
                         <p>Bali Island has many places of interest such as rice paddies, beautiful panorama, volcanoes, tourism activities as well as attractions. Also, it also has beautiful jungle, long sandy beaches, warm blue water, crashing surf and friendly people.</p>
-                        <p>Bali enchants with its dramatic dances and colorful ceremonies, its arts, and crafts, to its luxurious beach resorts and exciting nightlife. And everywhere, you will find intricately carved temples.</p>
+                        <p>Baliii enchants with its dramatic dances and colorful ceremonies, its arts, and crafts, to its luxurious beach resorts and exciting nightlife. And everywhere, you will find intricately carved temples.</p>
                     </Card>
                 </Col>
             </Row>  
@@ -127,6 +127,8 @@ const LandingPage = () => (
     </div>
   </>
 );
+
+tes
 
 
 
