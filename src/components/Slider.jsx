@@ -1,3 +1,4 @@
+import "../styles/css/slider.css";
 import React from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import '@splidejs/splide/dist/css/splide.min.css';
@@ -16,27 +17,14 @@ const Slide = ({src}) => {
         {src.map((data) => (
           <SplideSlide>
             <Link to={data.link}>
-            <img src={data.image}  alt={data.alt}/>
+              <a href={data.href}>
+              <img src={data.image} alt={data.alt} />
+              </a>
             </Link>
             <h5 className="text-slider">{data.text}</h5>
           </SplideSlide>
         ))}
       </Splide>
-
-
-    /* {src.map((data) => (
-      <SplideSlide>
-      <div>
-        <a>
-          <img src={data.image}  alt={data.alt}/>
-          <p>{data.text}</p>
-        </a>
-      </div>
-      </SplideSlide>
-    ))}
-    </Splide> */
-
-
     );
   };
 
