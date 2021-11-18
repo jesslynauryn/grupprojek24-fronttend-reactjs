@@ -1,9 +1,9 @@
 import React from "react";
 import Carousel from "react-bootstrap/Carousel";
 
-const Carousell = ({ carouselData }) => {
+const Carousell = ({ carouselData, style }) => {
   return (
-    <Carousel>
+    <Carousel style={style}>
       {carouselData.map((data) => (
         <Carousel.Item>
           {data.content}
