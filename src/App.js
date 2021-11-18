@@ -6,6 +6,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import "@splidejs/splide/dist/css/splide.min.css";
 import LandingPage from "./page/LandingPage"
 import Wisata1 from "./page/Wisata1";
+import Comment from "./components/Comment";
 
 function App() {
   return (

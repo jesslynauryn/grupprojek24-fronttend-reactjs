@@ -6,37 +6,31 @@ import '../FolderCSS/Slider.css'
 
 const dataSlider = [
     {
-      image: "https://a0.muscache.com/im/pictures/miso/Hosting-52537875/original/197e7acb-3023-408f-82d9-3963d54541c3.jpeg?im_w=1200",
-      alt: "Image 1",
-      text: "Umalas-area Oasis New 1BR Villa with Private Pool",
-      href: "https://www.airbnb.co.id/rooms/52537875?federated_search_id=525d36dc-ae2b-4838-9816-653fb51d4012&source_impression_id=p3_1637214141_uoId0Oxr4StqRfUu",
+        image:"https://images.unsplash.com/photo-1595319101337-601371f02e1c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1974&q=80",
+        alt:"Image 1",
+        text: "Nusa Penida"
     },
     {
-      image: "https://a0.muscache.com/im/pictures/miso/Hosting-50985387/original/716003ae-cb90-49a4-b109-7cd552977dee.jpeg?im_w=960",
-      alt: "Image 2",
-      text: "Brand New Villa - 1BR - Seminyak",
-      href: "https://www.airbnb.co.id/rooms/50985387?federated_search_id=525d36dc-ae2b-4838-9816-653fb51d4012&source_impression_id=p3_1637214148_X47k2uQL%2FeBMlOrI",
+        image:"https://images.unsplash.com/photo-1444194563460-454833ba6005?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1936&q=80", 
+        alt:"Image 2",
+        text: "Ubud",
     },
     {
-      image: "https://a0.muscache.com/im/pictures/a260144b-3d63-4035-a153-e627a52ba399.jpg?im_w=960",
-      alt: "Image 3",
-      text: "Villa Island Seminyak",
-      href: "https://www.airbnb.co.id/rooms/47037328?federated_search_id=525d36dc-ae2b-4838-9816-653fb51d4012&source_impression_id=p3_1637214164_zXtFZcQfYJTfzLjH",
+        image:"https://images.unsplash.com/photo-1538172522459-61e5aede6d06?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1975&q=80", 
+        alt:"Image 3",
+        text: "Kuta"
     },
     {
-      image: "https://a0.muscache.com/im/pictures/b7407b97-82e0-4caa-992a-f28a31333e2f.jpg?im_w=960",
-      alt: "Image 4",
-      text: "Villa LaDonna",
-      href: "https://www.airbnb.co.id/rooms/48022603?federated_search_id=525d36dc-ae2b-4838-9816-653fb51d4012&source_impression_id=p3_1637213907_WmGyAGlKNyM2mYwM",
+        image:"https://images.unsplash.com/photo-1501179691627-eeaa65ea017c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80", 
+        alt:"Pura Uluwatu",
+        text: "Pura Uluwatu",
     },
     {
-      image: "https://a0.muscache.com/im/pictures/4dd98184-a61b-4f78-903c-f7aebae3361b.jpg?im_w=960",
-      alt: "Image 5",
-      text: "Amazing Luxury Villa - 2BR - Seminyak",
-      href: "https://www.airbnb.co.id/rooms/28712924?federated_search_id=525d36dc-ae2b-4838-9816-653fb51d4012&source_impression_id=p3_1637214118_onnS3MCLfLGPx59U",
-    },
-  ];
-  
+        image:"https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1200,h_630/w_80,x_15,y_15,g_south_west,l_klook_water/activities/dw5mamvpyhc4jp0xohoc/Vue%20Beach%20Club%20Day%20Pass%20di%20Canggu.jpg",
+        alt:"Image 5",
+        text: "Vue Beach Club, Canggu",
+    }
+];
 
  const Slider = () => (
      <>
