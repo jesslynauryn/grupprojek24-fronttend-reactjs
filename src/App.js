@@ -7,16 +7,23 @@ import "@splidejs/splide/dist/css/splide.min.css";
 import LandingPage from "./page/LandingPage"
 import Wisata1 from "./page/Wisata1";
 import Comment from "./components/Comment";
+import { Routes, Route, Link } from 'react-router-dom';
+import Kuliner from "./page/kuliner"
+import WelcomePage from "./page/welcomePage";
+
+
 
 function App() {
   return (
+  
     <div>
-      <NaviBar></NaviBar>
-      <LandingPage></LandingPage>
-
-      {/* -------------------page wisata-1--------------------------------------------- */}
-      {/* <Wisata1 /> */}
+      <Routes>
+        <Route path="/" element={<WelcomePage />} />
+        <Route path="/home" element={<LandingPage />}/>
+        <Route path="/wisata1" element={<Wisata1/>}/> 
+      </Routes>
     </div>
+   
   );
 }
 
