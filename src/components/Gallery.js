@@ -1,19 +1,19 @@
 import React from 'react';
-import '../FolderCSS/gallery.css'
+import '../FolderCSS/gallery.css';
 
-import Img1 from '../images/images-kuta-1.jpg'
-import Img2 from '../images/images-kuta-2.jpg'
-import Img3 from '../images/images-kuta-3.jpg'
-import Img4 from '../images/images-kuta-4.jpg'
-import Img5 from '../images/images-kuta-5.jpg'
-import Img6 from '../images/images-kuta-6.jpg'
-import Img7 from '../images/images-kuta-7.jpg'
-import Img8 from '../images/images-nusa-3.jpg'
-import Img9 from '../images/images-nusa-4.jpg'
-import Img10 from '../images/images-nusa-5.jpg'
-import Img11 from '../images/images-nusa-6.jpg'
-import Img12 from '../images/images-ubud-1.jpg'
-import Img13 from '../images/images-ubud-2.jpg'
+import Img1 from '../images/images-kuta-1.jpg';
+import Img2 from '../images/images-kuta-2.jpg';
+import Img3 from '../images/images-kuta-3.jpg';
+import Img4 from '../images/images-kuta-4.jpg';
+import Img5 from '../images/images-kuta-5.jpg';
+import Img6 from '../images/images-kuta-6.jpg';
+import Img7 from '../images/images-kuta-7.jpg';
+import Img8 from '../images/images-nusa-3.jpg';
+import Img9 from '../images/images-nusa-4.jpg';
+import Img10 from '../images/images-nusa-5.jpg';
+import Img11 from '../images/images-nusa-6.jpg';
+import Img12 from '../images/images-ubud-1.jpg';
+import Img13 from '../images/images-ubud-2.jpg';
 
 const Gallery = () => {
     let data =[
@@ -74,7 +74,7 @@ const Gallery = () => {
     return(
         <div>
             <div className="title">
-              <h2 style={{textAlign: "center", marginTop:"100px"}}>Image Gallery</h2>
+              <h2 style={{textAlign: "center", marginTop:"200px", marginBottom:"80px"}}>Image Gallery</h2>
             </div>
             <div className="gallery">
                 {data.map ((item, index) => {

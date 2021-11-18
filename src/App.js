@@ -10,7 +10,7 @@ import Wisata1 from "./page/Wisata1";
 function App() {
   return (
     <div>
-      <NaviBar></NaviBar>
+      {/* <NaviBar></NaviBar> */}
       <LandingPage></LandingPage>
 
       {/* -------------------page wisata-1--------------------------------------------- */}
