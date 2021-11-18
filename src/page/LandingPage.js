@@ -3,6 +3,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import NaviBar from "../components/Navbar";
 import Slide from "../components/Slider";
 import "../FolderCSS/Slider.css"
+import Content from "../components/Content";
+import Gallery from "../components/Gallery";
+import Slider from "./Slider";
+import ButtonItem from "../components/Button";
 
 // Landing Page
 const dataSlider = [
@@ -65,6 +69,12 @@ const dataLandingPage = [
   }
 ];
 
+const buttonWisata = {
+  href: "https://www.traveloka.com/id-id/kereta-api/search?st=PSE.ML&dt=22-10-2021.null&ps=2.0&pd=KAI",
+  title: "Pesan Sekarang",
+};
+
+
 const LandingPage = () => (
   <>
     <div>
@@ -73,6 +83,14 @@ const LandingPage = () => (
       <div className="foto-slider">
       <Slide src={dataSlider} />
       </div>
+
+      <Carousell carouselData={dataLandingPage}/>
+      <ButtonItem style={{position:"absolute", top:"95%", left:"45%"}} buttonLink={buttonWisata.href} title={buttonWisata.title} />
+     </div>
+    <div>
+      <Content></Content>
+      <Slider></Slider>
+      <Gallery></Gallery>
     </div>
   </>
 );
