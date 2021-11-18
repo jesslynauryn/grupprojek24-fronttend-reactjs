@@ -32,6 +32,7 @@ function ScrollToTop() {
     background-color: skyblue;
   `;
 
+
   return (
     <div className="scroll-to-top">
       {isVisible && (
