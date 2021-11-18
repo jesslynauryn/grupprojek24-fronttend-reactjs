@@ -9,6 +9,7 @@ import Gallery from "./page/Gallery";
 import Slider from "./page/Slider";
 import Content from "./page/Content";
 import Wisata1 from "./page/Wisata1";
+import Comment from "./components/Comment";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Content></Content>
       <Slider></Slider>
       <Gallery></Gallery>
+      <Comment />
 
       {/* -------------------page wisata-1--------------------------------------------- */}
       {/* <Wisata1 /> */}
