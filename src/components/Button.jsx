@@ -1,8 +1,8 @@
 import Button from 'react-bootstrap/Button';
 
-const ButtonItem = ({buttonLink, title}) => {
+const ButtonItem = ({buttonLink, title, style}) => {
     return (
-        <Button href={buttonLink}>{title}</Button> 
+        <Button style={style} href={buttonLink}>{title}</Button> 
     )
 }
 

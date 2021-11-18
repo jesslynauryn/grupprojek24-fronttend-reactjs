@@ -1,8 +1,10 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import '../styles/welcomePage.css'
+import { Link } from "react-router-dom";
+import Comment from "../components/Comment";
 
-export default function LandingPage() {
+export default function WelcomePage() {
   return (
     <>
       <Container fluid>
@@ -14,7 +16,11 @@ export default function LandingPage() {
               Plan your vacation in one of <br /> the 
               most beautiful place in the world
             </p>
-            <Button className="tombol">Explore</Button>
+            <Button className="tombol">
+              <Link to="/home">
+              Explore
+              </Link>
+            </Button>
             
           </Col>
           <Col md={9} style={{padding:'0'}}>
@@ -28,6 +34,8 @@ export default function LandingPage() {
           </Col>
         </Row>
       </Container>
+
+      <Comment />
     </>
   );
 }
