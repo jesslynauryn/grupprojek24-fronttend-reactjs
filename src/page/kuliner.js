@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import NaviBar from "../components/Navbar";
 import { Col, Row, Image, Container, Card, Carousel } from "react-bootstrap";
 import ScrollToTop from "../components/ScrollToTop";
