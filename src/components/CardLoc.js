@@ -8,7 +8,6 @@ export default function CardLocs({ nameLoc, loc }) {
 
     return (
         <Card style={{
-            margin: '0',
             border: '1px solid grey',
             borderRadius: '0.1em',
             margin: '0.5em 1em'}}>

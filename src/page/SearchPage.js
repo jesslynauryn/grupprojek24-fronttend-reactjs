@@ -45,7 +45,7 @@ export default function Maps() {
 
   useEffect(() => {
     getPlaces(viewport.longitude, viewport.latitude);
-  }, []);
+  }, [viewport]);
 
   const getPlaces = async (viewport, category) => {
     const response = await fetch(
@@ -59,15 +59,6 @@ export default function Maps() {
     e.preventDefault();
     setCategory(e.target.value);
     getPlaces(viewport, e.target.value);
-    if (poi.features !== undefined) {
-      poi.features.map((i) => {
-        console.log(i);
-        console.log(i.geometry.coordinates[0]);
-        let a = i.geometry.coordinates;
-        let objectCoordinates = Object.assign({}, a);
-        console.log(objectCoordinates);
-      });
-    }
   };
 
   return (

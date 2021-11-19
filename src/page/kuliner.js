@@ -1,6 +1,6 @@
 import React from "react";
 import NaviBar from "../components/Navbar";
-import { Col, Row, Image, Container, Card, Carousel } from "react-bootstrap";
+import { Col, Row, Image, Container, Card } from "react-bootstrap";
 import ScrollToTop from "../components/ScrollToTop";
 import { Centered } from "../styles/kulinerStyle";
 import "../styles/kulinerStyle.css";

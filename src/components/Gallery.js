@@ -78,7 +78,7 @@ const Gallery = () => {
                 {data.map ((item, index) => {
                     return (
                         <div className="pics" key={index}>
-                            <img src={item.imgSrc} style={{width: '100%'}}></img>
+                            <img src={item.imgSrc} style={{width: '100%'}} alt="gallery"></img>
                         </div>
                     )
                 })}

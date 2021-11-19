@@ -2,7 +2,6 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import routes from "../page/routes";
 import { useCount } from "../context/wishlistContext";
 
 const NaviBar = () => {

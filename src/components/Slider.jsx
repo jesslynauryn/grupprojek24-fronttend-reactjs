@@ -13,15 +13,15 @@ const Slide = ({ src }) => {
         gap: "1rem",
       }}
     >
-      {src.map((data) => (
-        <SplideSlide>
-          <Link to={data.link}>
-            <a href={data.href}>
-              <img src={data.image} alt={data.alt} />
-            </a>
-          </Link>
-          <h5 className="text-slider">{data.text}</h5>
-        </SplideSlide>
+      {src.map((data, index) => (
+        <Link to={data.link} key={index}>
+          <SplideSlide>
+            
+                <img src={data.image} alt={data.alt} />
+            
+            <h5 className="text-slider">{data.text}</h5>
+          </SplideSlide>
+        </Link>
       ))}
     </Splide>
   );
