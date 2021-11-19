@@ -1,5 +1,6 @@
 import Carousell from "../components/Carousel";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { useCount } from "../context/wishlistContext";
 
 // Landing Page
 
@@ -7,40 +8,40 @@ const dataLandingPage = [
   {
     content: (
       <>
-        <img
-          className="d-block w-100"
-          src="https://images.unsplash.com/photo-1555433258-d095529cd481?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1974&q=80"
-          alt="Nusapenida"
-        />
+        <img className="d-block w-100" src="https://images.unsplash.com/photo-1555433258-d095529cd481?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1974&q=80" alt="Nusapenida" />
       </>
     ),
-    title: "Nusa Penida"
+    title: "Nusa Penida",
   },
   {
     content: (
       <>
-       <img
-          className="d-block w-100"
-          src="https://images.unsplash.com/photo-1555433258-d095529cd481?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1974&q=80"
-          alt="Nusapenida"
-        />
+        <img className="d-block w-100" src="https://images.unsplash.com/photo-1555433258-d095529cd481?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1974&q=80" alt="Nusapenida" />
       </>
     ),
-    title: ""
-  }
+    title: "",
+  },
 ];
 
-const LandingPage = () => (
-  <>
-    <div>
-      <Carousell carouselData={dataLandingPage} />
-    </div>
-  </>
-);
+// const LandingPage = () => (
+//   <>
+//     <div>
+//       <Carousell carouselData={dataLandingPage} />
+//     </div>
+//   </>
+// );
 
-
-
-
+const LandingPage = () => {
+  const count = useCount();
+  return (
+    <>
+      <div>
+        <Carousell carouselData={dataLandingPage} />
+      </div>
+      <p>Count: {count.state.count}</p>
+    </>
+  );
+};
 
 // -------------------------------------------------------------------------------------------
 

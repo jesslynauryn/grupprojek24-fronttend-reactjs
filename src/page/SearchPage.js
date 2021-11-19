@@ -13,14 +13,13 @@ const ICON = `M20.2,15.7L20.2,15.7c1.1-1.6,1.8-3.6,1.8-5.7c0-5.6-4.5-10-10-10S2,
 
 const SIZE = 20;
 
-const MAPBOX_TOKEN =
-  "pk.eyJ1IjoiZWxkb2RvNjQxIiwiYSI6ImNrdndna3hnaDN2ajgzMG8wbjh3NG44YzUifQ.vXDXCjgnSb--p576SCputQ";
+const MAPBOX_TOKEN = "pk.eyJ1IjoiZWxkb2RvNjQxIiwiYSI6ImNrdndna3hnaDN2ajgzMG8wbjh3NG44YzUifQ.vXDXCjgnSb--p576SCputQ";
 
 export default function Maps() {
   const [viewport, setViewport] = useState({
     latitude: -8.67356,
     longitude: 115.20362,
-    zoom: 10
+    zoom: 10,
   });
   const [poi, setPoi] = useState({});
   const [category, setCategory] = useState();
@@ -37,7 +36,7 @@ export default function Maps() {
 
       return handleViewportChange({
         ...newViewport,
-        ...geocoderDefaultOverrides
+        ...geocoderDefaultOverrides,
       });
     },
     [handleViewportChange]
@@ -57,12 +56,12 @@ export default function Maps() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setCategory(e.target.value)
+    setCategory(e.target.value);
     getPlaces(viewport, e.target.value);
     if (poi.features !== undefined) {
       poi.features.map((i) => {
-        console.log(i)
-        console.log(i.geometry.coordinates[0])
+        console.log(i);
+        console.log(i.geometry.coordinates[0]);
         let a = i.geometry.coordinates;
         let objectCoordinates = Object.assign({}, a);
         console.log(objectCoordinates);
@@ -72,24 +71,11 @@ export default function Maps() {
 
   return (
     <div>
-      <div style={{ height: "70vh", width:'100%' }}>
-        <MapGL
-          ref={mapRef}
-          {...viewport}
-          width="100%"
-          height="100%"
-          onViewportChange={handleViewportChange}
-          mapboxApiAccessToken={MAPBOX_TOKEN}
-          mapStyle="mapbox://styles/mapbox/streets-v11"
-        >
-          <Geocoder
-            mapRef={mapRef}
-            onViewportChange={handleGeocoderViewportChange}
-            mapboxApiAccessToken={MAPBOX_TOKEN}
-            position="top-left"
-          />
+      <div style={{ height: "70vh", width: "100%" }}>
+        <MapGL ref={mapRef} {...viewport} width="100%" height="100%" onViewportChange={handleViewportChange} mapboxApiAccessToken={MAPBOX_TOKEN} mapStyle="mapbox://styles/mapbox/streets-v11">
+          <Geocoder mapRef={mapRef} onViewportChange={handleGeocoderViewportChange} mapboxApiAccessToken={MAPBOX_TOKEN} position="top-left" />
           <form style={{ marginTop: "0.70em", marginLeft: "16em" }}>
-            <select id="category" onChange={handleSubmit} style={{width: '240px', height: '35px', border:'none', borderRadius: '5px', fontSize: '15px', paddingLeft: '1em'}}>
+            <select id="category" onChange={handleSubmit} style={{ width: "240px", height: "35px", border: "none", borderRadius: "5px", fontSize: "15px", paddingLeft: "1em" }}>
               <option value="">Select Category</option>
               <option value="beach">Beach</option>
               <option value="coffee">Coffee</option>
@@ -100,23 +86,20 @@ export default function Maps() {
           {poi.features !== undefined ? (
             poi.features.map((u) => {
               return (
-                <Marker
-                      longitude={u.geometry.coordinates[0]}
-                      latitude={u.geometry.coordinates[1]}
-                    >
-                      <svg
-                        height={SIZE}
-                        viewBox="0 0 24 24"
-                        style={{
-                          cursor: "pointer",
-                          fill: "#d00",
-                          stroke: "none",
-                          transform: `translate(${-SIZE / 2}px,${-SIZE}px)`
-                        }}
-                      >
-                        <path d={ICON} />
-                      </svg>
-                  </Marker>
+                <Marker longitude={u.geometry.coordinates[0]} latitude={u.geometry.coordinates[1]}>
+                  <svg
+                    height={SIZE}
+                    viewBox="0 0 24 24"
+                    style={{
+                      cursor: "pointer",
+                      fill: "#d00",
+                      stroke: "none",
+                      transform: `translate(${-SIZE / 2}px,${-SIZE}px)`,
+                    }}
+                  >
+                    <path d={ICON} />
+                  </svg>
+                </Marker>
               );
             })
           ) : (
@@ -124,37 +107,32 @@ export default function Maps() {
           )}
         </MapGL>
 
-        {
-            category !== undefined ? (
-                <Col className="text-center"
-                    style={{
-                        paddingTop: '5px',
-                        height: '2em',
-                        fontSize: '20px',
-                        fontWeight: 'bold',
-                        backgroundColor: '#f3f5f6',
-                        letterSpacing: '0.3em',
-                    }}>
-                        {category}
-                </Col>
-            ) : (<div></div>)
-        }
-        
-        {poi.features !== undefined ? (
-        poi.features.map((u) => {
-          return (
-                <CardLocs 
-                    key={u.id}
-                    nameLoc={u.text}
-                    loc={u.place_name}
-                />
-          );
-        })
-      ) : (
-        <div></div>
-      )}
+        {category !== undefined ? (
+          <Col
+            className="text-center"
+            style={{
+              paddingTop: "5px",
+              height: "2em",
+              fontSize: "20px",
+              fontWeight: "bold",
+              backgroundColor: "#f3f5f6",
+              letterSpacing: "0.3em",
+            }}
+          >
+            {category}
+          </Col>
+        ) : (
+          <div></div>
+        )}
 
+        {poi.features !== undefined ? (
+          poi.features.map((u) => {
+            return <CardLocs key={u.id} nameLoc={u.text} loc={u.place_name} />;
+          })
+        ) : (
+          <div></div>
+        )}
       </div>
     </div>
   );
-};
+}
