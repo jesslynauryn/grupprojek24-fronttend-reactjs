@@ -45,7 +45,7 @@ export default function Maps() {
 
   useEffect(() => {
     getPlaces(viewport.longitude, viewport.latitude);
-  }, [viewport]);
+  }, []);
 
   const getPlaces = async (viewport, category) => {
     const response = await fetch(
@@ -63,7 +63,7 @@ export default function Maps() {
 
   return (
     <div>
-      <NaviBar/>
+      <NaviBar />
       <div style={{ height: "70vh", width: "100%" }}>
         <MapGL ref={mapRef} {...viewport} width="100%" height="100%" onViewportChange={handleViewportChange} mapboxApiAccessToken={MAPBOX_TOKEN} mapStyle="mapbox://styles/mapbox/streets-v11">
           <Geocoder mapRef={mapRef} onViewportChange={handleGeocoderViewportChange} mapboxApiAccessToken={MAPBOX_TOKEN} position="top-left" />
@@ -77,9 +77,9 @@ export default function Maps() {
           </form>
 
           {poi.features !== undefined ? (
-            poi.features.map((u) => {
+            poi.features.map((u, index) => {
               return (
-                <Marker longitude={u.geometry.coordinates[0]} latitude={u.geometry.coordinates[1]}>
+                <Marker key={index} longitude={u.geometry.coordinates[0]} latitude={u.geometry.coordinates[1]}>
                   <svg
                     height={SIZE}
                     viewBox="0 0 24 24"
